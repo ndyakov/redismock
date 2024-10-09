@@ -301,6 +301,9 @@ func (m *mock) mapArgs(cmd string, cmdArgs *[]interface{}) bool {
 	case "hset", "hmset":
 		// 2
 		cut = 2
+	case "xadd":
+		// 3
+		cut = 3
 	case "eval", "evalsha":
 		// more, i guess nobody uses it (eval/evalsha), miss
 		return false
